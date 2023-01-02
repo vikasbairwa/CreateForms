@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgb(201, 216, 243);
+    padding-block: 1rem;
+    height: 100%;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.mainCard{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(186, 205, 240);
+    width: 90%;
+    padding: 1rem;
+    margin-block: 1rem;
+}
+/* }
+.titleBar{
+    margin: auto;
+    background-color: azure;
+    width: 100%;
+    justify-content: center; */
+
+
+/* .formBoundary{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+} */

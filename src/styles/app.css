@@ -1,0 +1,21 @@
+.pageDivision{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem;
+}
+.flexParent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    
+}
+.outputTitle{
+    
+}
+.inputTitle{
+}
+/* .App{
+    width:100vw
+} */

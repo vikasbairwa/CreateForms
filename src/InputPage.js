@@ -9,7 +9,10 @@ function InputPage() {
   const [inputJson, setInputJson] = useState('')
   const handleClick=()=>{
     // console.log(inputJson)
-    dispatch(deleteData())
+    if(count!==null){
+      console.log({"input":count})
+      dispatch(deleteData())
+    }
     dispatch(inputJsonData(inputJson))
   }
   return (

@@ -75,6 +75,11 @@ function MainCard({ data, keyString, show }) {
                         })}
                     </div>
                 )
+            }else{
+                data.subParameters.map((el) => {
+                    let tempKey = `${keyString}.${el.jsonKey}`
+                    dispatch(delkey(tempKey))
+                })
             }
         } else {
             return (

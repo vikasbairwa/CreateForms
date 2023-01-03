@@ -12,9 +12,13 @@ function FormPage() {
 
   
   const count = useSelector((state) => state.radio.inputData)
+  
+  
   useEffect(() => {
+    const finalData = store.getState().radio.radio
+    console.log({"formout":finalData})
     if (count !== null) {
-      console.log(count)
+      console.log({"form":finalData})
       try {
         let temp = JSON.parse(count)
       // console.log(temp[0])

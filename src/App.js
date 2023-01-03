@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <div className="pageDivision">
         <div className="flexParent">
-            <div className="inputTitle">Input JSON</div>
+            <div className="outputTitle">Input JSON</div>
             <InputPage/>
         </div>
         <div className="flexParent">

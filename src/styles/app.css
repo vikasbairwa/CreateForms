@@ -12,7 +12,9 @@
     
 }
 .outputTitle{
-    
+    font-weight: 500;
+    font-size: larger;
+    color: darkgreen;
 }
 .inputTitle{
 }

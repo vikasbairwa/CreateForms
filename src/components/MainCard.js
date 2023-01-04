@@ -6,7 +6,6 @@ import { delkey } from '../slice'
 import '../styles/MainCard.css'
 import Switch from "react-switch";
 function MainCard({ data, keyString, show }) {
-    console.log({ "show": show })
     const [checked, setChecked] = useState(false)
     const dispatch = useDispatch()
     const handleChange = (e) => {
@@ -18,14 +17,11 @@ function MainCard({ data, keyString, show }) {
         setChecked(!checked)
     }
 
-    console.log({ "checked": checked })
     const count = useSelector((state) => state.radio.radio)
-    console.log({ 'key': keyString })
 
     const d = new Date();
     let time = d.getTime();
     if (data && (checked || show || data.validate.required)) {
-        console.log(time, data)
         if (data.uiType === "Group") {
             data.subParameters.sort(function (x, y) {
                 if (x.sort < y.sort) {
@@ -57,10 +53,8 @@ function MainCard({ data, keyString, show }) {
         } else if (data.uiType === "Ignore") {
             let visible = true;
             data.conditions.map((el) => {
-                console.log(el)
-                console.log({ 'count': count })
-                console.log(count[el.jsonKey])
-                console.log(el.value)
+                // console.log(count[el.jsonKey])
+                // console.log(el.value)
                 if (Object.hasOwn(count, el.jsonKey) == false || count[el.jsonKey] !== el.value) {
                     visible = false;
                 }

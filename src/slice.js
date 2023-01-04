@@ -8,12 +8,10 @@ export const slice = createSlice({
     },
     reducers: {
         add: (state, action) => {
-            console.log(action.payload)
             const a = action.payload.key;
             const b = action.payload.value;
             const temp = {}
             temp[a] = b;
-            console.log(state.radio[a])
             if(state.radio[a]!==null){
                 state.radio[a] = b;
             }else{

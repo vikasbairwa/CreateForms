@@ -5,14 +5,11 @@ import { useSelector, useDispatch } from 'react-redux'
 import { addData } from '../slice'
 function SelectType({data, keyString}) {
     const [selected, setSelected] = useState(null)
-    console.log(data)
     const count = useSelector((state) => state.radio.radio)
     const dispatch = useDispatch()
     useEffect(() => {
         if(data.validate.defaultValue){
-          console.log({"def":data.validate.defaultValue})
           if(typeof count[keyString] === 'undefined'){
-            console.log({"count":count[keyString]})
             dispatch(addData({key : keyString, value:  data.validate.defaultValue}))
           }
         setSelected(data.validate.defaultValue)
@@ -20,7 +17,6 @@ function SelectType({data, keyString}) {
     }, [])
     
     const handleSelect=(e)=>{
-        console.log(e)
         dispatch(addData({key : keyString, value:  e}))
         setSelected(e)
     }

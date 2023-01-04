@@ -5,11 +5,8 @@ function RadioType({data, keyString}) {
   const count = useSelector((state) => state.radio.radio)
   const dispatch = useDispatch()
   const [visible, setvisible] = useState(count)
-  console.log({"keyString":keyString})
   useEffect(() => {
-    console.log(count[keyString])
     if(typeof count[keyString] === 'undefined'){
-      console.log({"count":count})
       dispatch(addData({key : keyString, value:  data.validate.defaultValue}))
       setvisible(data.validate.defaultValue)
     }
@@ -18,11 +15,10 @@ function RadioType({data, keyString}) {
   
   
   // localStorage.setItem(keyString, data.validate.defaultValue);
-  console.log({"data":data})
+  
   const handleClick=(e)=>{
     // e.target.className = "btn btn-primary"
     dispatch(addData({key : keyString, value:  e.target.value}))
-    console.log(e.target.value)
     setvisible(e.target.value)
     // localStorage.setItem(keyString, e.target.value);
   }

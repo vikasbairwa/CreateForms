@@ -5,9 +5,6 @@ import RadioType from './RadioType';
 import InputType from './InputType';
 import SwitchType from './SwitchType';
 function SubCard({data, keyString}) {
-    
-    console.log(data)
-    console.log(keyString)
     if(data.uiType==='Input'){
         return(
             <InputType keyString={keyString} type={'text'} data={data} />

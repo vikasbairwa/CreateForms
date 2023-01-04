@@ -5,7 +5,6 @@ function InputType({data, type, keyString}) {
     const [inputValue, setInputValue] = useState()
     const dispatch = useDispatch()
     useEffect(() => {
-      console.log(inputValue)
       if(typeof inputValue !== 'undefined'){
         dispatch(addData({key : keyString, value: inputValue }))
       }

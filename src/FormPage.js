@@ -16,9 +16,7 @@ function FormPage() {
   
   useEffect(() => {
     const finalData = store.getState().radio.radio
-    console.log({"formout":finalData})
     if (count !== null) {
-      console.log({"form":finalData})
       try {
         let temp = JSON.parse(count)
       // console.log(temp[0])
@@ -44,7 +42,6 @@ function FormPage() {
   }
 
   const OuterCard = (data) => {
-    console.log(data)
     if(data.data.validate.required || checked){
       return (
         <div className="mainCard">

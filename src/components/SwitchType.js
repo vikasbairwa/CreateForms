@@ -9,7 +9,6 @@ function SwitchType({data, keyString}) {
     useEffect(() => {
       if(data.validate.defaultValue){
         if(typeof count[keyString] === 'undefined'){
-            console.log({"count":count})
             dispatch(addData({key : keyString, value:  data.validate.defaultValue}))
           }
           setChecked(data.validate.defaultValue)
